@@ -1,4 +1,4 @@
-import React from 'react';
+import React, {useEffect} from 'react';
 import Grid from "@mui/material/Grid";
 import CreatePostModal from "./CreatePostModal";
 import FriendSection from "./FriendSection";
@@ -10,6 +10,8 @@ import {Image} from "@mui/icons-material";
 //todo if lenght>5 add button showFriends
 const UserContent = () => {
 	const posts = useSelector((state: AppState) => state.user.posts)
+	console.log(posts,'PSOT')
+	useEffect(()=>console.log(posts),[])
 	return (
 		<>
 			<FriendSection/>
